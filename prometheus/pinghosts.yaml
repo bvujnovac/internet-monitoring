@@ -1,0 +1,8 @@
+---
+- targets:
+    - http://www.google.com/;google.com
+    - https://github.com/;github.com
+    - https://www.apple.com/;apple.com
+    - https://facebook.com/;facebook.com
+    - http://speedtest.ht.hr/;speedtest.ht.hr
+    - https://www.speedtest.net/;speedtest.net
