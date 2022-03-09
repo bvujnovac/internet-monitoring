@@ -1,10 +1,8 @@
 # Internet Monitoring Docker Stack with Prometheus + Grafana
 
-> This repository is a fork from [maxandersen/internet-monitoring](https://github.com/maxandersen/internet-monitoring), tailored for use on a Raspberry Pi. It has only been tested on a Raspberry Pi 4 running Pi OS 64-bit beta.
+> This repository is a fork from [geerlingguy/internet-pi](https://github.com/geerlingguy/internet-pi), tailored for use on a Raspberry Pi. It has only been tested on a Raspberry Pi 4 running Pi OS 64-bit beta.
 >
 > This has also recently been merged into the internet-pi repository, so there could be a few little things that need tweaking.
-
-Stand-up a Docker [Prometheus](http://prometheus.io/) stack containing Prometheus, Grafana with [blackbox-exporter](https://github.com/prometheus/blackbox_exporter), and [speedtest-exporter](https://github.com/MiguelNdeCarvalho/speedtest-exporter) to collect and graph home Internet reliability and throughput.
 
 ## Pre-requisites
 
@@ -13,7 +11,7 @@ Make sure Docker and [Docker Compose](https://docs.docker.com/compose/install/) 
 ## Quick Start
 
 ```
-git clone https://github.com/geerlingguy/internet-monitoring
+git clone https://github.com/bvujnovac/internet-monitoring.git
 cd internet-monitoring
 docker-compose up -d
 ```
@@ -35,7 +33,8 @@ That's it. docker-compose builds the entire Grafana and Prometheus stack automag
 The Grafana Dashboard is now accessible via: `http://<Host IP Address>:3030` for example http://localhost:3030
 
 username - admin
-password - wonka (Password is stored in the `config.monitoring` env file)
+
+password - admin (Password is stored in the `config.monitoring` env file)
 
 The DataSource and Dashboard for Grafana are automatically provisioned.
 
@@ -58,5 +57,7 @@ http://localhost:9798/metrics speedtest exporter endpoint. Does take about 30 se
 Thanks to @maxandersen for making the original project this fork is based on.
 
 Thanks to @vegasbrianc work on making a [super easy docker](https://github.com/vegasbrianc/github-monitoring) stack for running prometheus and grafana.
+
+Thanks to @geerlingguy for keeping this up to date.
 
 This setup is not secured in any way, so please only use on non-public networks, or find a way to secure it on your own.
